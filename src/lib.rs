@@ -228,10 +228,9 @@ impl Param {
         self.par.i_height = height as c_int;
         self.par.i_width = width as c_int;
         self.par.i_timebase_num = 1;
-        self.par.i_timebase_den = 1000;
+        self.par.i_timebase_den = 30;
         self.par.i_fps_num = 30;
         self.par.i_fps_den = 1;
-
         self
     }
 }
