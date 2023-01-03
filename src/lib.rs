@@ -156,7 +156,6 @@ impl Picture {
 
     pub fn set_timestamp(mut self, pts: i64) -> Picture {
         self.pic.i_pts = pts;
-        self.pic.i_dts = pts;
         self
     }
 }
