@@ -227,8 +227,6 @@ impl Param {
     pub fn set_dimension(mut self, height: usize, width: usize) -> Param {
         self.par.i_height = height as c_int;
         self.par.i_width = width as c_int;
-        self.par.i_fps_num = 30;
-        self.par.i_fps_den = 1;
         self
     }
 }
