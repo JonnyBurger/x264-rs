@@ -156,6 +156,7 @@ impl Picture {
 
     pub fn set_timestamp(mut self, pts: i64) -> Picture {
         self.pic.i_pts = pts;
+        self.pic.i_dts = pts;
         self
     }
 }
@@ -227,6 +228,8 @@ impl Param {
     pub fn set_dimension(mut self, height: usize, width: usize) -> Param {
         self.par.i_height = height as c_int;
         self.par.i_width = width as c_int;
+        self.par.i_timebase_num = 1;
+        self.par.i_timebase_den = 1000;
 
         self
     }
